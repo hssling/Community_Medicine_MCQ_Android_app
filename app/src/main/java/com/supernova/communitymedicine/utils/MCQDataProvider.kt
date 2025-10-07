@@ -23,6 +23,9 @@ object MCQDataProvider {
         // Add Nutrition questions
         questions.addAll(getNutritionQuestions())
 
+        // Add Nutrition from textbook content
+        questions.addAll(getAdditionalNutritionQuestions())
+
         // Add Environmental Health questions
         questions.addAll(getEnvironmentalHealthQuestions())
 
@@ -356,6 +359,205 @@ object MCQDataProvider {
             optionD = "National AIDS Control Programme",
             correctAnswer = "A",
             explanation = "The National Malaria Control Programme (1953) is India's oldest public health programme, later evolved into National Vector Borne Disease Control Programme.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        )
+    )
+
+    private fun getAdditionalNutritionQuestions() = listOf(
+        // MCQs from edu_video_pipeline/nutrition_quiz_bank.txt
+        Question(
+            questionText = "During pregnancy, how many extra kilocalories are generally needed per day?",
+            optionA = "100 kcal",
+            optionB = "200 kcal",
+            optionC = "300 kcal",
+            optionD = "600 kcal",
+            correctAnswer = "C",
+            explanation = "Extra energy requirement for pregnant women in the second and third trimesters is around 300 kcal/day above the normal requirement.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Which nutrient is most important for preventing anemia in pregnancy?",
+            optionA = "Vitamin C",
+            optionB = "Calcium",
+            optionC = "Iron and folic acid",
+            optionD = "Vitamin D",
+            correctAnswer = "C",
+            explanation = "Iron and folic acid are crucial for preventing anemia during pregnancy. Iron is needed for hemoglobin synthesis and folic acid prevents neural tube defects.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "A lactating mother requires approximately how many extra kilocalories per day?",
+            optionA = "150 kcal",
+            optionB = "300 kcal",
+            optionC = "500 kcal",
+            optionD = "700 kcal",
+            correctAnswer = "C",
+            explanation = "Breastfeeding mothers need about 500 extra calories per day to produce sufficient milk while maintaining their own health.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Which food is a good source of calcium during pregnancy and lactation?",
+            optionA = "Apple",
+            optionB = "Rice",
+            optionC = "Ragi (finger millet)",
+            optionD = "Mustard oil",
+            correctAnswer = "C",
+            explanation = "Ragi (finger millet) is an excellent source of calcium, containing about 344 mg per 100g, making it ideal for bone health during pregnancy and lactation.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "What practice supports hydration for breastfeeding mothers?",
+            optionA = "Drinking only tea and coffee",
+            optionB = "Avoiding water before breastfeeding",
+            optionC = "Drinking water before and after breastfeeding",
+            optionD = "Restricting fluids",
+            correctAnswer = "C",
+            explanation = "Adequate hydration is essential for milk production. Mothers should drink water before, during, and after breastfeeding to stay hydrated.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // Additional Community Medicine Nutrition MCQs
+        Question(
+            questionText = "Which micronutrient deficiency is most prevalent among Indian children under 5 years?",
+            optionA = "Vitamin A",
+            optionB = "Vitamin D",
+            optionC = "Vitamin B12",
+            optionD = "Folic acid",
+            correctAnswer = "A",
+            explanation = "Vitamin A deficiency is highly prevalent among Indian children, leading to increased susceptibility to infections and potential blindness (xerophthalmia).",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "The Recommended Dietary Allowance (RDA) for energy in India is established by:",
+            optionA = "WHO",
+            optionB = "NIN (National Institute of Nutrition)",
+            optionC = "ICMR",
+            optionD = "All of the above",
+            correctAnswer = "D",
+            explanation = "RDAs in India are established jointly by ICMR, NIN (National Institute of Nutrition), and follow WHO guidelines.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "What is the primary cause of iron deficiency anemia in India?",
+            optionA = "Blood loss",
+            optionB = "Inadequate iron intake",
+            optionC = "Malabsorption",
+            optionD = "Chronic disease",
+            correctAnswer = "B",
+            explanation = "Iron deficiency anemia in India is primarily due to inadequate dietary intake of iron, compounded by low bioavailability from vegetarian diets.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_EASY
+        ),
+
+        Question(
+            questionText = "Mid Day Meal (MDM) scheme in India was initially started to:",
+            optionA = "Provide free meals to all school children",
+            optionB = "Improve school enrollment",
+            optionC = "Prevent child malnutrition",
+            optionD = "Eradicate poverty",
+            correctAnswer = "C",
+            explanation = "The MDM scheme was started in Tamil Nadu in 1962 to prevent severe malnutrition and ensure children received at least one nutritious meal daily.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Which chapter of Indian Penal Code deals with the prevention of food adulteration?",
+            optionA = "IPC Section 272-273",
+            optionB = "IPC Section 200-210",
+            optionC = "IPC Section 320-330",
+            optionD = "IPC Section 420-430",
+            correctAnswer = "A",
+            explanation = "IPC Sections 272 and 273 deal with sale/exposure of noxious food/drinks and causing death by negligence respectively (now supplemented by FSS Act 2006).",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_HARD
+        ),
+
+        // Communicable Diseases - Additional Questions
+        Question(
+            questionText = "The Revised National Tuberculosis Control Programme (RNTCP) in India uses which strategy?",
+            optionA = "Directly Observed Treatment Short-course (DOTS)",
+            optionB = "Pulse Polio Immunization",
+            optionC = "Expanded Programme on Immunization",
+            optionD = "Integrated Disease Surveillance Programme",
+            correctAnswer = "A",
+            explanation = "RNTCP employs DOTS strategy with standardized short-course chemotherapy, observed treatment, and systematic monitoring and evaluation.",
+            chapter = Constants.Categories.COMMUNICABLE,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Which vaccine is given orally for prevention of cholera?",
+            optionA = "Ty21a",
+            optionB = "Dukoral",
+            optionC = "Shanchol",
+            optionD = "All of the above",
+            correctAnswer = "B",
+            explanation = "Dukoral and Shanchol are oral cholera vaccines. Ty21a is an oral typhoid vaccine. Dukoral provides protection against cholera and ETEC.",
+            chapter = Constants.Categories.COMMUNICABLE,
+            difficulty = Constants.DIFFICULTY_HARD
+        ),
+
+        // Maternal and Child Health - Additional Questions
+        Question(
+            questionText = "Janani Suraksha Yojana (JSY) provides cash assistance to:",
+            optionA = "Pregnant women only",
+            optionB = "Women delivering at home",
+            optionC = "Women delivering in health facilities",
+            optionD = "Postnatal women only",
+            correctAnswer = "C",
+            explanation = "JSY provides conditional cash transfer to pregnant women who opt for institutional delivery to promote safe motherhood and reduce MMR.",
+            chapter = Constants.Categories.MATERNAL_CHILD,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "The Integrated Child Development Services (ICDS) scheme targets children up to:",
+            optionA = "3 years",
+            optionB = "5 years",
+            optionC = "6 years",
+            optionD = "12 years",
+            correctAnswer = "C",
+            explanation = "ICDS provides integrated services for children up to 6 years, including supplementary nutrition, immunization, health check-ups, and early learning.",
+            chapter = Constants.Categories.MATERNAL_CHILD,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // Health Systems - Additional Questions
+        Question(
+            questionText = "The National Health Mission (NHM) comprises:",
+            optionA = "NRHM only",
+            optionB = "NUHM only",
+            optionC = "Both NRHM and NUHM",
+            optionD = "Ayushman Bharat only",
+            correctAnswer = "C",
+            explanation = "National Health Mission includes National Rural Health Mission (NRHM) and National Urban Health Mission (NUHM) to strengthen health systems.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "The Health Management Information System (HMIS) in India reports at:",
+            optionA = "Block level only",
+            optionB = "District and state levels",
+            optionC = "National level only",
+            optionD = "Village level only",
+            correctAnswer = "B",
+            explanation = "HMIS collects data from PHCs and other facilities and reports at district and state levels for planning and monitoring.",
             chapter = Constants.Categories.HEALTH_SYSTEMS,
             difficulty = Constants.DIFFICULTY_MEDIUM
         )
