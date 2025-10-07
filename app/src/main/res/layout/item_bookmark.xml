@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardMaxElevation="6dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header: Question Text and Bookmark Icon -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_bookmark_filled"
+                app:tint="@color/primary"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/tv_question_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/bookmark_icon_placeholder"
+                android:text="Question text goes here..."
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="What is the primary cause of anemia in chronic kidney disease patients?" />
+
+        </RelativeLayout>
+
+        <!-- Meta Information Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_chapter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Chapter 5"
+                android:textSize="12sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Haematology" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/colorOutlineVariant"
+                android:alpha="0.5" />
+
+            <TextView
+                android:id="@+id/tv_difficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:textSize="11sp"
+                android:textColor="@color/difficulty_medium"
+                android:textStyle="bold"
+                android:background="@drawable/shape_difficulty_background"
+                android:paddingStart="6dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="2dp"
+                tools:text="Hard" />
+
+        </LinearLayout>
+
+        <!-- Tag (if available) -->
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="Important"
+            android:textSize="10sp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:background="@drawable/shape_difficulty_background"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="Weak Area" />
+
+        <!-- Note Preview (if available) -->
+        <TextView
+            android:id="@+id/tv_note_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Review blood pressure medications..."
+            android:textSize="11sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:background="@drawable/shape_note_background"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:drawableStart="@drawable/ic_notes"
+            android:drawablePadding="6dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="Need to review drug interactions" />
+
+        <!-- Footer: Review Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_time_ago"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2 hours ago"
+                android:textSize="10sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                tools:text="1 day ago" />
+
+            <TextView
+                android:id="@+id/tv_review_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reviewed 3 times"
+                android:textSize="10sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginStart="12dp"
+                tools:text="Never reviewed" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

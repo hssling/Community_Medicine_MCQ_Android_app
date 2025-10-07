@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Theme.CommunityMedicine" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorPrimaryContainer">@color/primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/onPrimaryContainer</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/onSecondary</item>
+        <item name="colorSecondaryContainer">@color/secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/onSecondaryContainer</item>
+
+        <!-- Tertiary brand color -->
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/onTertiary</item>
+
+        <!-- Error color -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/onError</item>
+
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/onBackground</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Custom attributes -->
+        <item name="colorCorrect">@color/correct_answer</item>
+        <item name="colorWrong">@color/wrong_answer</item>
+        <item name="colorSelected">@color/selected_answer</item>
+        <item name="colorSkipped">@color/skipped_answer</item>
+    </style>
+
+    <!-- Quiz theme with timer styling -->
+    <style name="Theme.CommunityMedicine.Quiz" parent="Theme.CommunityMedicine">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+
+    <!-- Custom button styles -->
+    <style name="Widget.CommunityMedicine.Button" parent="Widget.Material3.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="Widget.CommunityMedicine.Button.Primary" parent="Widget.CommunityMedicine.Button">
+        <item name="android:backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/onPrimary</item>
+    </style>
+
+    <style name="Widget.CommunityMedicine.Button.Secondary" parent="Widget.CommunityMedicine.Button">
+        <item name="android:backgroundTint">@color/secondary</item>
+        <item name="android:textColor">@color/onSecondary</item>
+    </style>
+
+    <!-- Card styles -->
+    <style name="Widget.CommunityMedicine.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <!-- Progress bar styles -->
+    <style name="Widget.CommunityMedicine.ProgressBar" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="trackColor">@color/progress_background</item>
+        <item name="trackThickness">8dp</item>
+    </style>
+
+    <!-- Text styles -->
+    <style name="TextAppearance.CommunityMedicine.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.CommunityMedicine.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.CommunityMedicine.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.CommunityMedicine.Caption" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Quiz specific styles -->
+    <style name="TextAppearance.CommunityMedicine.Question" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="TextAppearance.CommunityMedicine.Option" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Timer text style -->
+    <style name="TextAppearance.CommunityMedicine.Timer" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textColor">@color/error</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Score text styles -->
+    <style name="TextAppearance.CommunityMedicine.Score" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Achievement styles -->
+    <style name="Widget.CommunityMedicine.AchievementBadge" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">50dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <!-- Dialog themes -->
+    <style name="Theme.CommunityMedicine.Dialog" parent="Theme.Material3.DayNight.Dialog.Alert">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/secondary</item>
+    </style>
+
+    <!-- Bottom sheet theme -->
+    <style name="Theme.CommunityMedicine.BottomSheetDialog" parent="Theme.Material3.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Material3.BottomSheet.Modal</item>
+    </style>
+
+</resources>

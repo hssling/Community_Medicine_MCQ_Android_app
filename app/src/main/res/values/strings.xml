@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Community Medicine MCQ</string>
+
+    <!-- Main Activity -->
+    <string name="welcome_message">Welcome to Community Medicine MCQ!</string>
+    <string name="welcome_subtitle">Master NEET preparation with chapter-wise MCQs</string>
+    <string name="your_progress">Your Progress</string>
+    <string name="overall_progress">Overall Progress</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="statistics">Statistics</string>
+    <string name="settings">Settings</string>
+    <string name="questions">Questions</string>
+    <string name="correct">Correct</string>
+    <string name="study_streak">Streak</string>
+    <string name="days">days</string>
+
+    <!-- Quiz Activity -->
+    <string name="quiz_title">Chapter Quiz</string>
+    <string name="question">Question</string>
+    <string name="of">of</string>
+    <string name="submit">Submit</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="finish_quiz">Finish Quiz</string>
+    <string name="skip_question">Skip</string>
+    <string name="bookmark_question">Bookmark</string>
+    <string name="time_remaining">Time Remaining</string>
+
+    <!-- Result Activity -->
+    <string name="quiz_results">Quiz Results</string>
+    <string name="score">Score</string>
+    <string name="correct_answers">Correct Answers</string>
+    <string name="wrong_answers">Wrong Answers</string>
+    <string name="skipped_questions">Skipped Questions</string>
+    <string name="time_taken">Time Taken</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="review_answers">Review Answers</string>
+    <string name="retake_quiz">Retake Quiz</string>
+    <string name="back_to_chapters">Back to Chapters</string>
+    <string name="excellent">Excellent!</string>
+    <string name="good_job">Good Job!</string>
+    <string name="keep_practicing">Keep Practicing!</string>
+
+    <!-- Chapters Activity -->
+    <string name="select_chapter">Select Chapter</string>
+    <string name="chapter_progress">Progress</string>
+    <string name="questions_count">%d Questions</string>
+    <string name="best_score">Best Score: %.1f%%</string>
+    <string name="completed">Completed</string>
+    <string name="in_progress">In Progress</string>
+    <string name="not_started">Not Started</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="mixed">Mixed</string>
+
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="loading">Loading...</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="retry">Retry</string>
+    <string name="close">Close</string>
+
+    <!-- Notifications -->
+    <string name="quiz_completed">Quiz Completed!</string>
+    <string name="chapter_mastered">Chapter Mastered!</string>
+    <string name="new_high_score">New High Score!</string>
+
+    <!-- Accessibility -->
+    <string name="question_image">Question diagram</string>
+    <string name="option_a">Option A</string>
+    <string name="option_b">Option B</string>
+    <string name="option_c">Option C</string>
+    <string name="option_d">Option D</string>
+    <string name="correct_answer">Correct answer</string>
+    <string name="wrong_answer">Wrong answer</string>
+
+    <!-- Menu -->
+    <string name="menu_bookmarks">Bookmarks</string>
+    <string name="menu_statistics">Statistics</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+
+    <!-- About -->
+    <string name="about_title">About Community Medicine MCQ</string>
+    <string name="about_message">An educational app designed for MBBS students preparing for NEET examination. Features chapter-wise MCQs with progress tracking and performance analytics.</string>
+    <string name="version">Version</string>
+    <string name="developed_by">Developed by Supernova Corp</string>
+
+    <!-- Error Messages -->
+    <string name="error_loading_questions">Error loading questions. Please try again.</string>
+    <string name="error_saving_progress">Error saving progress. Please try again.</string>
+    <string name="no_questions_available">No questions available for this chapter.</string>
+    <string name="network_error">Network error. Please check your connection.</string>
+
+    <!-- Confirmation Dialogs -->
+    <string name="confirm_exit_quiz">Are you sure you want to exit the quiz? Your progress will be lost.</string>
+    <string name="confirm_reset_progress">Are you sure you want to reset all progress? This action cannot be undone.</string>
+
+    <!-- Hints -->
+    <string name="hint_select_chapter">Select a chapter to start practicing</string>
+    <string name="hint_quiz_in_progress">Answer all questions to complete the quiz</string>
+    <string name="hint_review_mode">Review your answers and explanations</string>
+
+    <!-- Quiz Activity -->
+    <string name="question_number">Question %1$d of %2$d</string>
+
+    <!-- Result Activity -->
+    <string name="correct_answers_count">%1$d/%2$d Correct</string>
+    <string name="wrong_answers_count">%d Wrong</string>
+    <string name="skipped_questions_count">%d Skipped</string>
+    <string name="time_taken_format">%s</string>
+    <string name="accuracy_format">%s%%</string>
+    <string name="score_percentage">%d%%</string>
+    <string name="excellent_work">Excellent Work! 🎉</string>
+    <string name="great_job">Great Job! 👏</string>
+    <string name="good_effort">Good Effort! 👍</string>
+
+
+    <!-- Chapter Progress -->
+    <string name="chapter_progress_percentage">%d%% Complete</string>
+    <string name="accuracy_percentage">Accuracy: %.1f%%</string>
+    <string name="study_streak_days">🔥 %d days</string>
+
+    <!-- Statistics Activity -->
+    <string name="overview">Overview</string>
+    <string name="chapters">Chapters</string>
+    <string name="achievements">Achievements</string>
+    <string name="history">History</string>
+    <string name="total_chapters">Total Chapters</string>
+    <string name="chapters_completed">Chapters Completed</string>
+    <string name="no_achievements_yet">No achievements yet. Keep practicing!</string>
+    <string name="unlocked">Unlocked!</string>
+    <string name="complete">Complete</string>
+    <string name="recent_activity">Recent Activity</string>
+    <string name="last_quizzes">Last %d quizzes completed</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Quiz related attributes -->
+    <attr name="colorCorrect" format="color"/>
+    <attr name="colorWrong" format="color"/>
+    <attr name="colorSelected" format="color"/>
+    <attr name="colorSkipped" format="color"/>
+
+    <!-- Splash screen attributes -->
+    <attr name="windowSplashScreenBackground" format="color"/>
+    <attr name="windowSplashScreenAnimatedIcon" format="reference"/>
+    <attr name="postSplashScreenTheme" format="reference"/>
+</resources>

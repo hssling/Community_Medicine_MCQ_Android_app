@@ -1,0 +1,40 @@
+# Android
+*.apk
+*.ap_
+*.dex
+bin/
+gen/
+.gradle/
+build/
+proguard/
+*.log
+navigation/
+*.iml
+.gradle
+local.properties
+*.jks
+*.list
+
+# Kotlin
+*.kt.bak
+*.kt~
+
+# IDE
+.idea/
+*.iws
+*.ipr
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
