@@ -77,8 +77,8 @@ app/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/community-medicine-mcq.git
-cd community-medicine-mcq
+git clone https://github.com/hssling/Community_Medicine_MCQ_Android_app.git
+cd community-medicine-mcq-app
 ```
 
 2. Open the project in Android Studio
@@ -99,6 +99,32 @@ cd community-medicine-mcq
 # Install debug APK (requires connected device)
 ./gradlew installDebug
 ```
+
+## CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration and deployment. The CI/CD pipeline automatically:
+
+- Builds debug and release APKs on every push/PR
+- Caches Gradle dependencies for faster builds
+- Uploads APK artifacts for download
+- Runs on Ubuntu with JDK 17
+
+### Workflow Triggers
+- **Push** to `main` or `master` branch
+- **Pull Request** to `main` or `master` branch
+
+### APK Downloads
+After successful builds, APKs are available as artifacts:
+- **Debug APK**: Available for all builds
+- **Release APK**: Available only for `main`/`master` branch pushes
+
+### Signing Release Builds
+For release builds, configure these GitHub secrets:
+- `SIGNING_KEY_ALIAS`
+- `SIGNING_KEY_PASSWORD`
+- `SIGNING_STORE_PASSWORD`
+
+Add your keystore file to `app/signing/` directory and update `app/build.gradle` accordingly.
 
 ## Database Schema
 
