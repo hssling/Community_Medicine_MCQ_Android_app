@@ -41,42 +41,21 @@ object MCQDataProvider {
         // Add Health Planning questions
         questions.addAll(getHealthPlanningQuestions())
 
+        // Add comprehensive MCQs from resources (Community_Medicine_MCQ_Bank.docx)
+        questions.addAll(getTextbookMCQs())
+
         return questions
     }
 
     private fun getEpidemiologyQuestions() = listOf(
         Question(
-            questionText = "Which of the following is NOT a component of the epidemiologic triad?",
-            optionA = "Host",
-            optionB = "Agent",
-            optionC = "Environment",
-            optionD = "Vector",
-            correctAnswer = "D",
-            explanation = "The epidemiologic triad consists of Agent, Host, and Environment. Vector is a mode of disease transmission, not a core component of the triad.",
-            chapter = Constants.Categories.EPIDEMIOLOGY,
-            difficulty = Constants.DIFFICULTY_EASY
-        ),
-
-        Question(
-            questionText = "The population attributable risk (PAR) is calculated as:",
-            optionA = "Incidence in exposed / Incidence in unexposed - 1 × 100",
-            optionB = "Incidence in population / Incidence in exposed",
-            optionC = "Proportion of disease in population due to exposure × Incidence",
-            optionD = "Incidence in total population - Incidence in unexposed population",
+            questionText = "Best measure of association in a cohort study is:",
+            optionA = "Prevalence ratio",
+            optionB = "Odds ratio",
+            optionC = "Relative risk",
+            optionD = "Attributable risk",
             correctAnswer = "C",
-            explanation = "PAR measures the proportion of disease in the population that could be eliminated if the exposure were removed completely.",
-            chapter = Constants.Categories.EPIDEMIOLOGY,
-            difficulty = Constants.DIFFICULTY_MEDIUM
-        ),
-
-        Question(
-            questionText = "In a cohort study of smoking and lung cancer, which measure would you use to determine risk?",
-            optionA = "Odds Ratio",
-            optionB = "Relative Risk",
-            optionC = "Attributable Risk",
-            optionD = "Population Attributable Risk",
-            correctAnswer = "B",
-            explanation = "Relative Risk (RR) is used in cohort studies to measure the probability of disease in exposed vs unexposed groups.",
+            explanation = "Cohort studies calculate incidence → allow RR estimation, best for measuring risk in longitudinal studies.",
             chapter = Constants.Categories.EPIDEMIOLOGY,
             difficulty = Constants.DIFFICULTY_MEDIUM
         )
@@ -558,6 +537,387 @@ object MCQDataProvider {
             optionD = "Village level only",
             correctAnswer = "B",
             explanation = "HMIS collects data from PHCs and other facilities and reports at district and state levels for planning and monitoring.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        )
+    )
+
+    // MCQs from D:\AI Book and Content Writer\community-medicine-mcq-app\resources\Community_Medicine_MCQ_Bank.docx
+    private fun getTextbookMCQs() = listOf(
+        // CM1: Concept of Health and Disease
+        Question(
+            questionText = "Which of the following is NOT a dimension of health as per WHO?",
+            optionA = "Spiritual",
+            optionB = "Mental",
+            optionC = "Social",
+            optionD = "Genetic",
+            correctAnswer = "D",
+            explanation = "Genetic is a determinant of health, not a dimension. WHO includes physical, mental, social dimensions; spiritual added later.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "The concept of 'positive health' includes:",
+            optionA = "Absence of disease only",
+            optionB = "Physical fitness, mental efficiency, social well-being",
+            optionC = "Ability to earn livelihood only",
+            optionD = "Presence of risk factors but no symptoms",
+            correctAnswer = "B",
+            explanation = "Positive health means functioning optimally beyond absence of disease - physical fitness + mental efficiency + social well-being.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM2: Epidemiology & Research Methods
+        Question(
+            questionText = "An epidemic curve with multiple peaks at interval of incubation period suggests:",
+            optionA = "Common source",
+            optionB = "Point source",
+            optionC = "Propagated epidemic",
+            optionD = "Mixed epidemic",
+            correctAnswer = "C",
+            explanation = "Propagated epidemics show multiple peaks as person-to-person spread continues with each generation of cases.",
+            chapter = Constants.Categories.EPIDEMIOLOGY,
+            difficulty = Constants.DIFFICULTY_HARD
+        ),
+
+        // CM3: Environment & Health
+        Question(
+            questionText = "Break-point chlorination ensures:",
+            optionA = "All chlorine removed",
+            optionB = "Residual chlorine after demand met",
+            optionC = "Only bacteria killed",
+            optionD = "Organic matter removed",
+            correctAnswer = "B",
+            explanation = "Break-point chlorination adds chlorine until demand is satisfied, then additional chlorine remains as free residual (0.5 mg/L).",
+            chapter = Constants.Categories.ENVIRONMENTAL,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Minimum standard floor space/person in housing is:",
+            optionA = "25 sq ft",
+            optionB = "50 sq ft",
+            optionC = "100 sq ft",
+            optionD = "150 sq ft",
+            correctAnswer = "C",
+            explanation = "ICMR standard for housing floor space is ≥100 sq ft per person.",
+            chapter = Constants.Categories.ENVIRONMENTAL,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM4: Screening for Disease
+        Question(
+            questionText = "A highly sensitive test will:",
+            optionA = "Detect most true positives",
+            optionB = "Detect most true negatives",
+            optionC = "Give no false positives",
+            optionD = "Miss most cases",
+            correctAnswer = "A",
+            explanation = "Sensitivity = proportion of true positives detected. High sensitivity means few false negatives (missed cases).",
+            chapter = Constants.Categories.NON_COMMUNICABLE,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Lead-time bias occurs in:",
+            optionA = "Cohort study",
+            optionB = "Screening programmes",
+            optionC = "Case-control study",
+            optionD = "Ecological study",
+            correctAnswer = "B",
+            explanation = "Lead-time bias creates apparent survival increase in screened groups due to earlier diagnosis, not real benefit.",
+            chapter = Constants.Categories.NON_COMMUNICABLE,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM5: Nutrition
+        Question(
+            questionText = "MUAC <11.5 cm in a child indicates:",
+            optionA = "Normal",
+            optionB = "Mild malnutrition",
+            optionC = "Moderate malnutrition",
+            optionD = "Severe acute malnutrition",
+            correctAnswer = "D",
+            explanation = "WHO cut-off for severe acute malnutrition (SAM) by MUAC is <11.5 cm.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Vitamin A prophylaxis dose at 9 months is:",
+            optionA = "50,000 IU",
+            optionB = "1 lakh IU",
+            optionC = "2 lakh IU",
+            optionD = "5 lakh IU",
+            correctAnswer = "B",
+            explanation = "First dose of Vitamin A prophylaxis at 9 months is 1 lakh IU orally.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM6–7: Demography & Family Planning
+        Question(
+            questionText = "India is in which stage of demographic cycle?",
+            optionA = "Early expanding",
+            optionB = "Late expanding",
+            optionC = "Low stationary",
+            optionD = "Declining",
+            correctAnswer = "B",
+            explanation = "India is in late expanding stage - high birth rates, rapidly declining death rates, population still growing.",
+            chapter = Constants.Categories.DEMOGRAPHY,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Copper-T 380A is effective for:",
+            optionA = "3 years",
+            optionB = "5 years",
+            optionC = "10 years",
+            optionD = "15 years",
+            correctAnswer = "C",
+            explanation = "Copper-T 380A intrauterine device provides contraception for up to 10 years.",
+            chapter = Constants.Categories.DEMOGRAPHY,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM8: Communicable Diseases
+        Question(
+            questionText = "Herd immunity is not useful in:",
+            optionA = "Measles",
+            optionB = "Tetanus",
+            optionC = "Polio",
+            optionD = "Rubella",
+            correctAnswer = "B",
+            explanation = "Tetanus is not transmitted person-to-person, so herd immunity doesn't apply (no community protection effect).",
+            chapter = Constants.Categories.COMMUNICABLE,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Incubation period of measles is:",
+            optionA = "1–2 days",
+            optionB = "5–7 days",
+            optionC = "10 days",
+            optionD = "3 weeks",
+            correctAnswer = "C",
+            explanation = "Measles incubation period is approximately 10 days (range: 7-18 days).",
+            chapter = Constants.Categories.COMMUNICABLE,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM9: Non-Communicable Diseases
+        Question(
+            questionText = "Which of the following is primordial prevention?",
+            optionA = "Health education in children against smoking",
+            optionB = "Vaccination",
+            optionC = "Screening for HTN",
+            optionD = "Rehabilitation",
+            correctAnswer = "A",
+            explanation = "Primordial prevention prevents emergence of risk factors (e.g., teaching children not to smoke before they start).",
+            chapter = Constants.Categories.NON_COMMUNICABLE,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Most common cancer in Indian women is:",
+            optionA = "Breast",
+            optionB = "Cervical",
+            optionC = "Ovarian",
+            optionD = "Lung",
+            correctAnswer = "C",
+            explanation = "Breast cancer overtook cervical as most common cancer in Indian women (ICMR data).",
+            chapter = Constants.Categories.NON_COMMUNICABLE,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM10: Health Statistics & Research Methods
+        Question(
+            questionText = "In normal distribution, 95% of values lie within:",
+            optionA = "1 SD",
+            optionB = "2 SD",
+            optionC = "3 SD",
+            optionD = "4 SD",
+            correctAnswer = "B",
+            explanation = "In normal distribution: 68% within 1 SD, 95.45% within 2 SD, 99.73% within 3 SD.",
+            chapter = Constants.Categories.BIOSTATISTICS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Chi-square test is used for:",
+            optionA = "Means",
+            optionB = "Proportions",
+            optionC = "Correlation",
+            optionD = "Regression",
+            correctAnswer = "B",
+            explanation = "Chi-square test assesses association between categorical variables/proportions.",
+            chapter = Constants.Categories.BIOSTATISTICS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM11: Occupational Health
+        Question(
+            questionText = "Byssinosis is caused by:",
+            optionA = "Silica dust",
+            optionB = "Asbestos",
+            optionC = "Cotton dust",
+            optionD = "Coal dust",
+            correctAnswer = "C",
+            explanation = "Byssinosis ('Brown Lung') is occupational lung disease in cotton mill workers caused by cotton dust.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Most common occupational cancer due to asbestos is:",
+            optionA = "Lung cancer",
+            optionB = "Bladder cancer",
+            optionC = "Mesothelioma",
+            optionD = "Leukemia",
+            correctAnswer = "C",
+            explanation = "Asbestos exposure is strongly associated with mesothelioma (pleural cancer) as most common occupational cancer.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM12: Health System in India
+        Question(
+            questionText = "Population covered by one Sub-Centre is:",
+            optionA = "1000–2000",
+            optionB = "3000–5000",
+            optionC = "10,000",
+            optionD = "20,000",
+            correctAnswer = "B",
+            explanation = "Each Sub-Centre covers 3000-5000 population in plains, 3000 in tribal/desert areas.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Staff at PHC includes:",
+            optionA = "1 MO + 14 staff",
+            optionB = "2 MO + 20 staff",
+            optionC = "4 specialists",
+            optionD = "ASHA workers",
+            correctAnswer = "A",
+            explanation = "Each Primary Health Centre has 1 Medical Officer and 14 paramedical/supporting staff.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM13: National Health Programmes
+        Question(
+            questionText = "Which programme includes DEC + albendazole MDA?",
+            optionA = "RNTCP",
+            optionB = "NVBDCP",
+            optionC = "UIP",
+            optionD = "NTCP",
+            correctAnswer = "B",
+            explanation = "National Vector Borne Disease Control Programme (NVBDCP) includes Mass Drug Administration with DEC + Albendazole for filariasis.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Anemia Mukt Bharat targets anemia reduction in:",
+            optionA = "Children only",
+            optionB = "Pregnant women only",
+            optionC = "All age groups",
+            optionD = "6 beneficiary groups",
+            correctAnswer = "D",
+            explanation = "AMB targets anemia in 6 beneficiary groups: children, adolescents, women of reproductive age, pregnant, lactating, men.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // CM14: International Health
+        Question(
+            questionText = "Alma Ata declaration year was:",
+            optionA = "1975",
+            optionB = "1978",
+            optionC = "1981",
+            optionD = "1986",
+            correctAnswer = "B",
+            explanation = "International Conference on Primary Health Care held in Alma Ata (Kazakhstan) in 1978.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        Question(
+            questionText = "Sustainable Development Goals (SDGs) target year is:",
+            optionA = "2020",
+            optionB = "2025",
+            optionC = "2030",
+            optionD = "2040",
+            correctAnswer = "C",
+            explanation = "United Nations established 17 Sustainable Development Goals (SDGs) to be achieved by 2030.",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_EASY
+        ),
+
+        // Additional CM1 questions for completeness
+        Question(
+            questionText = "Which dimension was added later to WHO's health definition?",
+            optionA = "Spiritual",
+            optionB = "Vocational",
+            optionC = "Environmental",
+            optionD = "Reproductive",
+            correctAnswer = "A",
+            explanation = "Spiritual dimension was added later to WHO's original definition of health (1948).",
+            chapter = Constants.Categories.HEALTH_SYSTEMS,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // Additional CM2 research methodology
+        Question(
+            questionText = "Which sampling method gives every person equal chance of selection?",
+            optionA = "Convenience",
+            optionB = "Purposive",
+            optionC = "Simple random",
+            optionD = "Snowball",
+            correctAnswer = "C",
+            explanation = "Simple random sampling ensures every element in population has equal, independent chance of selection.",
+            chapter = Constants.Categories.EPIDEMIOLOGY,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // Additional CM5 nutrition
+        Question(
+            questionText = "Which condition is caused by severe Vitamin B1 deficiency?",
+            optionA = "Beriberi",
+            optionB = "Pellagra",
+            optionC = "Scurvy",
+            optionD = "Rickets",
+            correctAnswer = "A",
+            explanation = "Beriberi is caused by thiamine (Vitamin B1) deficiency, manifesting as cardio-neurological symptoms.",
+            chapter = Constants.Categories.NUTRITION,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // Additional CM8 vaccination
+        Question(
+            questionText = "OPV (Oral Polio Vaccine) contains:",
+            optionA = "Live attenuated vaccine",
+            optionB = "Killed vaccine",
+            optionC = "Subunit vaccine",
+            optionD = "Toxoid vaccine",
+            correctAnswer = "A",
+            explanation = "OPV is live attenuated polio vaccine (Sabin vaccine) given orally, provides better mucosal immunity.",
+            chapter = Constants.Categories.COMMUNICABLE,
+            difficulty = Constants.DIFFICULTY_MEDIUM
+        ),
+
+        // Additional CM12 rural health
+        Question(
+            questionText = "First Referral Unit (FRU) serves as:",
+            optionA = "Outpatient clinic only",
+            optionB = "Emergency services for 4-5 PHCs",
+            optionC = "District hospital",
+            optionD = "Medical college",
+            correctAnswer = "B",
+            explanation = "FRUs provide emergency obstetric care and surgery, serving 4-5 Primary Health Centres as referral point.",
             chapter = Constants.Categories.HEALTH_SYSTEMS,
             difficulty = Constants.DIFFICULTY_MEDIUM
         )
